@@ -2,3 +2,4 @@ data
 model_save
 *.pptx*
 .python-version
+*_local.ipynb

@@ -1,1 +1,12 @@
+ipykernel
+ipywidgets
+
 pandas==2.0.3
+transformers
+scikit-learn
+matplotlib
+
+pytorch
+torchvision
+torchaudio 
+# pytorch-cuda

@@ -4,6 +4,7 @@ ipywidgets
 pandas==2.0.3
 transformers
 scikit-learn
+kornia
 matplotlib
 
 pytorch

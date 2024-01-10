@@ -63,7 +63,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Deviation / Discrepancy - Procedural,0.6480333209037781,0.6344769165607793,0.944663408481791,0.7591055932096027,6343.0,0.30964248979686954,0.47000000000000003
+)",Deviation / Discrepancy - Procedural,0.6480333209037781,0.6344769165607793,0.944663408481791,0.7591055932096027,6343.0,0.3096424897968695,0.47
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -110,7 +110,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Aircraft Equipment,0.6434983611106873,0.5384852691655098,0.8023442886692714,0.6444526490677496,4351.0,0.30964248979686954,0.36
+)",Aircraft Equipment,0.6434983611106873,0.5384852691655098,0.8023442886692714,0.6444526490677496,4351.0,0.3096424897968695,0.36
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -157,7 +157,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Conflict,0.7290143370628357,0.35254427888670226,0.6673762639701969,0.4613686534216335,1879.0,0.30964248979686954,0.19
+)",Conflict,0.7290143370628357,0.3525442788867022,0.6673762639701969,0.4613686534216335,1879.0,0.3096424897968695,0.19
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -204,7 +204,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Inflight Event / Encounter,0.5826006531715393,0.3077914901455148,0.6896409409822534,0.4256240448293428,2423.0,0.30964248979686954,0.17
+)",Inflight Event / Encounter,0.5826006531715393,0.3077914901455148,0.6896409409822534,0.4256240448293428,2423.0,0.3096424897968695,0.17
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -251,7 +251,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",ATC Issue,0.6715409755706787,0.38916468810705807,0.7149088025376685,0.5039832285115303,2522.0,0.30964248979686954,0.19
+)",ATC Issue,0.6715409755706787,0.389164688107058,0.7149088025376685,0.5039832285115303,2522.0,0.3096424897968695,0.19
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -298,7 +298,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Deviation - Altitude,0.7632577419281006,0.16385846672283066,0.40436590436590436,0.23321342925659472,962.0,0.30964248979686954,0.09
+)",Deviation - Altitude,0.7632577419281006,0.1638584667228306,0.4043659043659043,0.2332134292565947,962.0,0.3096424897968695,0.09
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -345,7 +345,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Deviation - Track / Heading,0.570661723613739,0.11416273826603812,0.6372997711670481,0.19363810185989916,874.0,0.30964248979686954,0.08
+)",Deviation - Track / Heading,0.570661723613739,0.1141627382660381,0.6372997711670481,0.1936381018598991,874.0,0.3096424897968695,0.08
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -392,7 +392,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Ground Event / Encounter,0.8399814963340759,0.25944907110826393,0.41411042944785276,0.31902323749507683,978.0,0.30964248979686954,0.1
+)",Ground Event / Encounter,0.8399814963340759,0.2594490711082639,0.4141104294478527,0.3190232374950768,978.0,0.3096424897968695,0.1
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -439,7 +439,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Flight Deck / Cabin / Aircraft Event,0.877741813659668,0.3016330451488953,0.3458149779735683,0.3222165212929708,908.0,0.30964248979686954,0.1
+)",Flight Deck / Cabin / Aircraft Event,0.877741813659668,0.3016330451488953,0.3458149779735683,0.3222165212929708,908.0,0.3096424897968695,0.1
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -486,7 +486,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Ground Incursion,0.7994446754455566,0.07787087235091178,0.34801762114537443,0.12726540475231574,454.0,0.30964248979686954,0.07
+)",Ground Incursion,0.7994446754455566,0.0778708723509117,0.3480176211453744,0.1272654047523157,454.0,0.3096424897968695,0.07
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -533,7 +533,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Airspace Violation,0.8779268860816956,0.10131004366812227,0.2857142857142857,0.14958091553836234,406.0,0.30964248979686954,0.06
+)",Airspace Violation,0.8779268860816956,0.1013100436681222,0.2857142857142857,0.1495809155383623,406.0,0.3096424897968695,0.06
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -580,7 +580,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Deviation - Speed,0.3034706115722656,0.041736227045075125,0.8354755784061697,0.07950097847358122,389.0,0.30964248979686954,0.02
+)",Deviation - Speed,0.3034706115722656,0.0417362270450751,0.8354755784061697,0.0795009784735812,389.0,0.3096424897968695,0.02
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -627,7 +627,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",Ground Excursion,0.9407681822776794,0.09744779582366589,0.14334470989761092,0.11602209944751381,293.0,0.30964248979686954,0.03
+)",Ground Excursion,0.9407681822776794,0.0974477958236658,0.1433447098976109,0.1160220994475138,293.0,0.3096424897968695,0.03
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -674,7 +674,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.30964248979686954,0.0
+)",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.3096424897968695,0.0
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -721,7 +721,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",micro avg,0.7314073443412781,0.3251826039021125,0.7221809278125136,0.44844157254561257,22871.0,0.30964248979686954,
+)",micro avg,0.7314073443412781,0.3251826039021125,0.7221809278125136,0.4484415725456125,22871.0,0.3096424897968695,
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -768,7 +768,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",macro avg,0.7314073443412781,0.24142363592852623,0.5166483559113569,0.30964248979686954,22871.0,0.30964248979686954,
+)",macro avg,0.7314073443412781,0.2414236359285262,0.5166483559113569,0.3096424897968695,22871.0,0.3096424897968695,
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -815,7 +815,7 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",weighted avg,0.7314073443412781,0.42251874587841604,0.7221809278125136,0.5233641627097276,22871.0,0.30964248979686954,
+)",weighted avg,0.7314073443412781,0.422518745878416,0.7221809278125136,0.5233641627097276,22871.0,0.3096424897968695,
 "SequenceClassificationModel(
   (l1): BertForSequenceClassification(
     (bert): BertModel(
@@ -862,4 +862,850 @@ Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimizati
     (dropout): Dropout(p=0.1, inplace=False)
     (classifier): Linear(in_features=768, out_features=14, bias=True)
   )
-)",samples avg,0.7314073443412781,0.36116405215433445,0.7414572177783653,0.4499407148458514,22871.0,0.30964248979686954,
+)",samples avg,0.7314073443412781,0.3611640521543344,0.7414572177783653,0.4499407148458514,22871.0,0.3096424897968695,
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Deviation / Discrepancy - Procedural,0.7316982746124268,0.7196989027813218,0.889326816963582,0.7955715393836825,6343.0,0.5440845189464234,0.41000000000000003
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Aircraft Equipment,0.8612679243087769,0.8305516921650441,0.8234888531372099,0.8270051933064051,4351.0,0.5440845189464234,0.53
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Conflict,0.8959740996360779,0.6611182244985062,0.824374667376264,0.733775461866414,1879.0,0.5440845189464234,0.25
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Inflight Event / Encounter,0.8136048316955566,0.574990832416575,0.6471316549731737,0.6089320388349515,2423.0,0.5440845189464234,0.29
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",ATC Issue,0.8649699091911316,0.6864258155033321,0.7759714512291832,0.7284571003163969,2522.0,0.5440845189464234,0.3
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Deviation - Altitude,0.8959740996360779,0.4363207547169811,0.5769230769230769,0.4968666069829901,962.0,0.5440845189464234,0.27
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Deviation - Track / Heading,0.8894956111907959,0.375195007800312,0.5503432494279176,0.4461966604823748,874.0,0.5440845189464234,0.21
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Ground Event / Encounter,0.9198518991470337,0.5535372848948374,0.5920245398773006,0.5721343873517787,978.0,0.5440845189464234,0.23
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Flight Deck / Cabin / Aircraft Event,0.9406756162643433,0.6565064478311841,0.6167400881057269,0.6360022714366838,908.0,0.5440845189464234,0.27
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Ground Incursion,0.9549282789230347,0.4703770197486535,0.5770925110132159,0.5182987141444115,454.0,0.5440845189464234,0.16
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Airspace Violation,0.939102292060852,0.3102409638554217,0.5073891625615764,0.3850467289719627,406.0,0.5440845189464234,0.15
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Deviation - Speed,0.9267931580543518,0.24875,0.5115681233933161,0.3347350714886459,389.0,0.5440845189464234,0.12
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",Ground Excursion,0.9722350835800171,0.49002849002849,0.5870307167235495,0.5341614906832297,293.0,0.5440845189464234,0.2
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.5440845189464234,0.04
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",micro avg,0.8998811841011047,0.6436166257714329,0.756941104455424,0.6956941067732927,22871.0,0.5440845189464234,
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",macro avg,0.8998811841011047,0.5009815311600471,0.6056717794075067,0.5440845189464234,22871.0,0.5440845189464234,
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",weighted avg,0.8998811841011047,0.6563057937305802,0.756941104455424,0.7004215818532696,22871.0,0.5440845189464234,
+"SequenceClassificationModel(
+  (l1): BertForSequenceClassification(
+    (bert): BertModel(
+      (embeddings): BertEmbeddings(
+        (word_embeddings): Embedding(30522, 768, padding_idx=0)
+        (position_embeddings): Embedding(512, 768)
+        (token_type_embeddings): Embedding(2, 768)
+        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+      (encoder): BertEncoder(
+        (layer): ModuleList(
+          (0-11): 12 x BertLayer(
+            (attention): BertAttention(
+              (self): BertSelfAttention(
+                (query): Linear(in_features=768, out_features=768, bias=True)
+                (key): Linear(in_features=768, out_features=768, bias=True)
+                (value): Linear(in_features=768, out_features=768, bias=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+              (output): BertSelfOutput(
+                (dense): Linear(in_features=768, out_features=768, bias=True)
+                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+                (dropout): Dropout(p=0.1, inplace=False)
+              )
+            )
+            (intermediate): BertIntermediate(
+              (dense): Linear(in_features=768, out_features=3072, bias=True)
+              (intermediate_act_fn): GELUActivation()
+            )
+            (output): BertOutput(
+              (dense): Linear(in_features=3072, out_features=768, bias=True)
+              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
+              (dropout): Dropout(p=0.1, inplace=False)
+            )
+          )
+        )
+      )
+      (pooler): BertPooler(
+        (dense): Linear(in_features=768, out_features=768, bias=True)
+        (activation): Tanh()
+      )
+    )
+    (dropout): Dropout(p=0.1, inplace=False)
+    (classifier): Linear(in_features=768, out_features=14, bias=True)
+  )
+)",samples avg,0.8998811841011047,0.6921876996981116,0.7919785813446155,0.6975485602371303,22871.0,0.5440845189464234,

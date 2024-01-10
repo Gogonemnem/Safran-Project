@@ -76,7 +76,7 @@ def main():
         loss, metrics_results, thresholds = evaluator.evaluate(testing_loader, loss_fn, optimize=True)
 
         # Save results, model, etc.
-        ModelManager.save_results(model, metrics_results, thresholds, "results.csv")
+        ModelManager.save_results(model.model_name, metrics_results, thresholds, "results.csv")
 
 if __name__ == "__main__":
     main()

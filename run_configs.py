@@ -21,9 +21,9 @@ def main():
     device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
     for _, row in config_df.iterrows():
-        abbreviated = row['Abbreviation'] == 'True'
+        abbreviated = row['Abbreviation']
         loss_type = row['Loss Type']
-        balanced = row['Balanced'] == 'True'
+        balanced = row['Balanced']
         layer_nums_str = row['Layers to Unfreeze']
         encoder_name = row['Encoder Name']
         batch_size = row['Batch Size']
@@ -67,7 +67,7 @@ def main():
             "Custom Classification Report": lambda y_true, y_pred: custom_classification_report(y_true, y_pred),
             "Optimization Metric": lambda y_true, y_pred: sklearn.metrics.f1_score(y_true, y_pred, average='macro', zero_division=0)
         }
-        
+
 
         # Train and evaluate the model
         trainer = TrainingHandler(model, optimizer, loss_fn, device, metrics_dict, directory="model_save")

@@ -44,7 +44,7 @@ class TrainingHandler:
         # Validation phase
         if validation_loader is not None:
             evaluation_handler = EvaluationHandler(self.model, self.device, self.metrics_dict)
-            evaluation_handler.evaluate(validation_loader, self.loss_fn)
+            avg_val_loss, val_metrics_results, val_thresholds = evaluation_handler.evaluate(validation_loader, self.loss_fn, optimize=False)
         else:
             avg_val_loss = None
             val_metrics_results = {}

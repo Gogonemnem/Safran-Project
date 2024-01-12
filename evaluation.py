@@ -64,7 +64,7 @@ class EvaluationHandler:
             thresholds = hyperparameters.get("thresholds", thresholds)
             percentile = hyperparameters.get("percentile", percentile)
 
-        metrics_results = self.metrics_manager.calculate_metrics(targets, logits, thresholds=thresholds, percentile=percentile, return_thresholds=True)
+        metrics_results, thresholds = self.metrics_manager.calculate_metrics(targets, logits, thresholds=thresholds, percentile=percentile, return_thresholds=True)
         return thresholds, metrics_results
     
     def optimize_thresholds(self, logits, targets):

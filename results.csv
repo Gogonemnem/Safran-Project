@@ -1,1711 +1,307 @@
 Model Name,Category,binary_accuracy,precision,recall,f1-score,support,Optimization Metric,Threshold
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation / Discrepancy - Procedural,0.7812124,0.775439568046518,0.8830206526880026,0.8257408226448474,6343.0,0.7137387249742578,0.26
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Aircraft Equipment,0.9148542,0.8913985854437599,0.8979544932199495,0.8946645294252347,4351.0,0.7137387249742578,0.39
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Conflict,0.9557612,0.8575803981623277,0.8940926024481107,0.8754559666492965,1879.0,0.7137387249742578,0.52
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Inflight Event / Encounter,0.9003239,0.7797173732335827,0.7742468014857614,0.7769724580658521,2423.0,0.7137387249742578,0.35
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",ATC Issue,0.91503936,0.8044798785117692,0.8402061855670103,0.821955003878976,2522.0,0.7137387249742578,0.46
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Altitude,0.95298475,0.735966735966736,0.735966735966736,0.735966735966736,962.0,0.7137387249742578,0.32
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Track / Heading,0.9579824,0.7625,0.6979405034324943,0.7287933094384708,874.0,0.7137387249742578,0.43
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Event / Encounter,0.9431745,0.6842105263157895,0.6912065439672802,0.6876907426246186,978.0,0.7137387249742578,0.37
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Flight Deck / Cabin / Aircraft Event,0.96140677,0.8088050314465409,0.7081497797356828,0.7551379917792131,908.0,0.7137387249742578,0.34
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Incursion,0.97602963,0.7035490605427975,0.7422907488986784,0.7224008574490889,454.0,0.7137387249742578,0.36
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Airspace Violation,0.9774179,0.7382352941176471,0.6182266009852216,0.6729222520107239,406.0,0.7137387249742578,0.23
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Speed,0.97408605,0.6128364389233955,0.7609254498714653,0.6788990825688073,389.0,0.7137387249742578,0.2
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Excursion,0.99046737,0.8571428571428571,0.7781569965870307,0.8157423971377459,293.0,0.7137387249742578,0.7000000000000001
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",No Specific Anomaly Occurred,0.99176306,0.0,0.0,0.0,89.0,0.7137387249742578,0.17
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",micro avg,0.94232166,0.7982123281895607,0.8277731625202221,0.8127240335701561,22871.0,0.7137387249742578,
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",macro avg,0.94232166,0.7151329819895516,0.7158845782038161,0.7137387249742578,22871.0,0.7137387249742578,
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",weighted avg,0.94232166,0.796348403679598,0.8277731625202221,0.8105631077314642,22871.0,0.7137387249742578,
-"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",samples avg,0.94232166,0.8228351072034552,0.8557865626583813,0.8092634405545095,22871.0,0.7137387249742578,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation / Discrepancy - Procedural,0.6480333209037781,0.6344769165607793,0.944663408481791,0.7591055932096027,6343.0,0.3096424897968695,0.47
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Aircraft Equipment,0.6434983611106873,0.5384852691655098,0.8023442886692714,0.6444526490677496,4351.0,0.3096424897968695,0.36
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Conflict,0.7290143370628357,0.3525442788867022,0.6673762639701969,0.4613686534216335,1879.0,0.3096424897968695,0.19
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Inflight Event / Encounter,0.5826006531715393,0.3077914901455148,0.6896409409822534,0.4256240448293428,2423.0,0.3096424897968695,0.17
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",ATC Issue,0.6715409755706787,0.389164688107058,0.7149088025376685,0.5039832285115303,2522.0,0.3096424897968695,0.19
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Altitude,0.7632577419281006,0.1638584667228306,0.4043659043659043,0.2332134292565947,962.0,0.3096424897968695,0.09
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Track / Heading,0.570661723613739,0.1141627382660381,0.6372997711670481,0.1936381018598991,874.0,0.3096424897968695,0.08
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Event / Encounter,0.8399814963340759,0.2594490711082639,0.4141104294478527,0.3190232374950768,978.0,0.3096424897968695,0.1
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Flight Deck / Cabin / Aircraft Event,0.877741813659668,0.3016330451488953,0.3458149779735683,0.3222165212929708,908.0,0.3096424897968695,0.1
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Incursion,0.7994446754455566,0.0778708723509117,0.3480176211453744,0.1272654047523157,454.0,0.3096424897968695,0.07
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Airspace Violation,0.8779268860816956,0.1013100436681222,0.2857142857142857,0.1495809155383623,406.0,0.3096424897968695,0.06
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Speed,0.3034706115722656,0.0417362270450751,0.8354755784061697,0.0795009784735812,389.0,0.3096424897968695,0.02
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Excursion,0.9407681822776794,0.0974477958236658,0.1433447098976109,0.1160220994475138,293.0,0.3096424897968695,0.03
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.3096424897968695,0.0
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",micro avg,0.7314073443412781,0.3251826039021125,0.7221809278125136,0.4484415725456125,22871.0,0.3096424897968695,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",macro avg,0.7314073443412781,0.2414236359285262,0.5166483559113569,0.3096424897968695,22871.0,0.3096424897968695,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",weighted avg,0.7314073443412781,0.422518745878416,0.7221809278125136,0.5233641627097276,22871.0,0.3096424897968695,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",samples avg,0.7314073443412781,0.3611640521543344,0.7414572177783653,0.4499407148458514,22871.0,0.3096424897968695,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation / Discrepancy - Procedural,0.7316982746124268,0.7196989027813218,0.889326816963582,0.7955715393836825,6343.0,0.5440845189464234,0.41000000000000003
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Aircraft Equipment,0.8612679243087769,0.8305516921650441,0.8234888531372099,0.8270051933064051,4351.0,0.5440845189464234,0.53
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Conflict,0.8959740996360779,0.6611182244985062,0.824374667376264,0.733775461866414,1879.0,0.5440845189464234,0.25
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Inflight Event / Encounter,0.8136048316955566,0.574990832416575,0.6471316549731737,0.6089320388349515,2423.0,0.5440845189464234,0.29
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",ATC Issue,0.8649699091911316,0.6864258155033321,0.7759714512291832,0.7284571003163969,2522.0,0.5440845189464234,0.3
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Altitude,0.8959740996360779,0.4363207547169811,0.5769230769230769,0.4968666069829901,962.0,0.5440845189464234,0.27
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Track / Heading,0.8894956111907959,0.375195007800312,0.5503432494279176,0.4461966604823748,874.0,0.5440845189464234,0.21
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Event / Encounter,0.9198518991470337,0.5535372848948374,0.5920245398773006,0.5721343873517787,978.0,0.5440845189464234,0.23
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Flight Deck / Cabin / Aircraft Event,0.9406756162643433,0.6565064478311841,0.6167400881057269,0.6360022714366838,908.0,0.5440845189464234,0.27
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Incursion,0.9549282789230347,0.4703770197486535,0.5770925110132159,0.5182987141444115,454.0,0.5440845189464234,0.16
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Airspace Violation,0.939102292060852,0.3102409638554217,0.5073891625615764,0.3850467289719627,406.0,0.5440845189464234,0.15
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Deviation - Speed,0.9267931580543518,0.24875,0.5115681233933161,0.3347350714886459,389.0,0.5440845189464234,0.12
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",Ground Excursion,0.9722350835800171,0.49002849002849,0.5870307167235495,0.5341614906832297,293.0,0.5440845189464234,0.2
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.5440845189464234,0.04
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",micro avg,0.8998811841011047,0.6436166257714329,0.756941104455424,0.6956941067732927,22871.0,0.5440845189464234,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",macro avg,0.8998811841011047,0.5009815311600471,0.6056717794075067,0.5440845189464234,22871.0,0.5440845189464234,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",weighted avg,0.8998811841011047,0.6563057937305802,0.756941104455424,0.7004215818532696,22871.0,0.5440845189464234,
-"SequenceClassificationModel(
-  (l1): BertForSequenceClassification(
-    (bert): BertModel(
-      (embeddings): BertEmbeddings(
-        (word_embeddings): Embedding(30522, 768, padding_idx=0)
-        (position_embeddings): Embedding(512, 768)
-        (token_type_embeddings): Embedding(2, 768)
-        (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-        (dropout): Dropout(p=0.1, inplace=False)
-      )
-      (encoder): BertEncoder(
-        (layer): ModuleList(
-          (0-11): 12 x BertLayer(
-            (attention): BertAttention(
-              (self): BertSelfAttention(
-                (query): Linear(in_features=768, out_features=768, bias=True)
-                (key): Linear(in_features=768, out_features=768, bias=True)
-                (value): Linear(in_features=768, out_features=768, bias=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-              (output): BertSelfOutput(
-                (dense): Linear(in_features=768, out_features=768, bias=True)
-                (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-                (dropout): Dropout(p=0.1, inplace=False)
-              )
-            )
-            (intermediate): BertIntermediate(
-              (dense): Linear(in_features=768, out_features=3072, bias=True)
-              (intermediate_act_fn): GELUActivation()
-            )
-            (output): BertOutput(
-              (dense): Linear(in_features=3072, out_features=768, bias=True)
-              (LayerNorm): LayerNorm((768,), eps=1e-12, elementwise_affine=True)
-              (dropout): Dropout(p=0.1, inplace=False)
-            )
-          )
-        )
-      )
-      (pooler): BertPooler(
-        (dense): Linear(in_features=768, out_features=768, bias=True)
-        (activation): Tanh()
-      )
-    )
-    (dropout): Dropout(p=0.1, inplace=False)
-    (classifier): Linear(in_features=768, out_features=14, bias=True)
-  )
-)",samples avg,0.8998811841011047,0.6921876996981116,0.7919785813446155,0.6975485602371303,22871.0,0.5440845189464234,
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Deviation / Discrepancy - Procedural,0.7316982746124268,0.7196989027813218,0.889326816963582,0.7955715393836825,6343.0,0.5440845189464234,0.41
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Aircraft Equipment,0.8612679243087769,0.8305516921650441,0.8234888531372099,0.8270051933064051,4351.0,0.5440845189464234,0.53
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Conflict,0.8959740996360779,0.6611182244985062,0.824374667376264,0.733775461866414,1879.0,0.5440845189464234,0.25
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Inflight Event / Encounter,0.8136048316955566,0.574990832416575,0.6471316549731737,0.6089320388349515,2423.0,0.5440845189464234,0.29
+NASA-AIML_MIKA_SafeAeroBERT_BCE,ATC Issue,0.8649699091911316,0.6864258155033321,0.7759714512291832,0.7284571003163969,2522.0,0.5440845189464234,0.3
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Deviation - Altitude,0.8959740996360779,0.4363207547169811,0.5769230769230769,0.4968666069829901,962.0,0.5440845189464234,0.27
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Deviation - Track / Heading,0.8894956111907959,0.375195007800312,0.5503432494279176,0.4461966604823748,874.0,0.5440845189464234,0.21
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Ground Event / Encounter,0.9198518991470336,0.5535372848948374,0.5920245398773006,0.5721343873517787,978.0,0.5440845189464234,0.23
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Flight Deck / Cabin / Aircraft Event,0.9406756162643432,0.6565064478311841,0.6167400881057269,0.6360022714366838,908.0,0.5440845189464234,0.27
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Ground Incursion,0.9549282789230348,0.4703770197486535,0.5770925110132159,0.5182987141444115,454.0,0.5440845189464234,0.16
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Airspace Violation,0.939102292060852,0.3102409638554217,0.5073891625615764,0.3850467289719627,406.0,0.5440845189464234,0.15
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Deviation - Speed,0.9267931580543518,0.24875,0.5115681233933161,0.3347350714886459,389.0,0.5440845189464234,0.12
+NASA-AIML_MIKA_SafeAeroBERT_BCE,Ground Excursion,0.9722350835800172,0.49002849002849,0.5870307167235495,0.5341614906832297,293.0,0.5440845189464234,0.2
+NASA-AIML_MIKA_SafeAeroBERT_BCE,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.5440845189464234,0.04
+NASA-AIML_MIKA_SafeAeroBERT_BCE,micro avg,0.8998811841011047,0.6436166257714329,0.756941104455424,0.6956941067732927,22871.0,0.5440845189464234,
+NASA-AIML_MIKA_SafeAeroBERT_BCE,macro avg,0.8998811841011047,0.5009815311600471,0.6056717794075067,0.5440845189464234,22871.0,0.5440845189464234,
+NASA-AIML_MIKA_SafeAeroBERT_BCE,weighted avg,0.8998811841011047,0.6563057937305802,0.756941104455424,0.7004215818532696,22871.0,0.5440845189464234,
+NASA-AIML_MIKA_SafeAeroBERT_BCE,samples avg,0.8998811841011047,0.6921876996981116,0.7919785813446155,0.6975485602371303,22871.0,0.5440845189464234,
+allenai_longformer-base-4096_BCE,Deviation / Discrepancy - Procedural,0.7079129815101624,0.7003142677561283,0.878291029481318,0.7792698279479648,6343.0,0.4410952056885843,0.47
+allenai_longformer-base-4096_BCE,Aircraft Equipment,0.8059231638908386,0.737363100252738,0.8046426108940473,0.7695351137487635,4351.0,0.4410952056885843,0.42
+allenai_longformer-base-4096_BCE,Conflict,0.8500694036483765,0.5519454472523064,0.7323044172432145,0.6294602012808783,1879.0,0.4410952056885843,0.26
+allenai_longformer-base-4096_BCE,Inflight Event / Encounter,0.7345673441886902,0.4382801664355062,0.6520841931489889,0.5242203052422031,2423.0,0.4410952056885843,0.24
+allenai_longformer-base-4096_BCE,ATC Issue,0.8209162354469299,0.588804841149773,0.7716098334655036,0.6679251759052686,2522.0,0.4410952056885843,0.26
+allenai_longformer-base-4096_BCE,Deviation - Altitude,0.8302637934684753,0.2800201816347124,0.5769230769230769,0.3770380434782608,962.0,0.4410952056885843,0.12
+allenai_longformer-base-4096_BCE,Deviation - Track / Heading,0.823600172996521,0.2351129363449692,0.5240274599542334,0.3245924875974486,874.0,0.4410952056885843,0.12
+allenai_longformer-base-4096_BCE,Ground Event / Encounter,0.8789449334144592,0.3700787401574803,0.4805725971370143,0.4181494661921708,978.0,0.4410952056885843,0.15
+allenai_longformer-base-4096_BCE,Flight Deck / Cabin / Aircraft Event,0.9155946373939514,0.498003992015968,0.5495594713656388,0.5225130890052356,908.0,0.4410952056885843,0.19
+allenai_longformer-base-4096_BCE,Ground Incursion,0.9107820391654968,0.2134831460674157,0.4185022026431718,0.2827380952380952,454.0,0.4410952056885843,0.08
+allenai_longformer-base-4096_BCE,Airspace Violation,0.9313281178474426,0.204225352112676,0.2857142857142857,0.2381930184804928,406.0,0.4410952056885843,0.09
+allenai_longformer-base-4096_BCE,Deviation - Speed,0.9064322113990784,0.1513452914798206,0.3470437017994858,0.2107728337236534,389.0,0.4410952056885843,0.05
+allenai_longformer-base-4096_BCE,Ground Excursion,0.9584451913833618,0.3427419354838709,0.5802047781569966,0.4309252217997464,293.0,0.4410952056885843,0.06
+allenai_longformer-base-4096_BCE,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.4410952056885843,0.02
+allenai_longformer-base-4096_BCE,micro avg,0.8618959784507751,0.531777620851255,0.7243671024441433,0.6133086534012032,22871.0,0.4410952056885843,
+allenai_longformer-base-4096_BCE,macro avg,0.8618959784507751,0.3794085284388118,0.5429628327090698,0.4410952056885843,22871.0,0.4410952056885843,
+allenai_longformer-base-4096_BCE,weighted avg,0.8618959784507751,0.5623938917447517,0.7243671024441433,0.629256363421909,22871.0,0.4410952056885843,
+allenai_longformer-base-4096_BCE,samples avg,0.8618959784507751,0.5984514611307762,0.7556234988210925,0.6176199255704932,22871.0,0.4410952056885843,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Deviation / Discrepancy - Procedural,0.7754743099212646,0.7601275069730375,0.9022544537285196,0.8251153402537486,6343.0,0.7045454972573634,0.34
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Aircraft Equipment,0.9086533784866332,0.8831435079726652,0.8910595265456217,0.8870838576821874,4351.0,0.7045454972573634,0.45
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Conflict,0.9507635235786438,0.8487830139823925,0.8722724853645556,0.8603674540682414,1879.0,0.7045454972573634,0.39
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Inflight Event / Encounter,0.9032855033874512,0.7949486301369864,0.7664052827073875,0.7804160537928136,2423.0,0.7045454972573634,0.35
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",ATC Issue,0.9076353311538696,0.7789165446559297,0.8437747819191118,0.8100494861058242,2522.0,0.7045454972573634,0.46
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Altitude,0.9540027976036072,0.7546549835706462,0.7162162162162162,0.7349333333333333,962.0,0.7045454972573634,0.36
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Track / Heading,0.9546506404876708,0.7302158273381295,0.6967963386727689,0.7131147540983608,874.0,0.7045454972573634,0.36
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Ground Event / Encounter,0.9428042769432068,0.6882845188284519,0.6728016359918201,0.6804550155118925,978.0,0.7045454972573634,0.46
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Flight Deck / Cabin / Aircraft Event,0.958815336227417,0.7739644970414201,0.7202643171806168,0.7461494580718768,908.0,0.7045454972573634,0.27
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Ground Incursion,0.974086046218872,0.6653992395437263,0.7709251101321586,0.7142857142857143,454.0,0.7045454972573634,0.3
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Airspace Violation,0.975289225578308,0.6946778711484594,0.6108374384236454,0.6500655307994758,406.0,0.7045454972573634,0.17
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Speed,0.9743637442588806,0.6352657004830918,0.6760925449871465,0.6550435865504359,389.0,0.7045454972573634,0.25
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",Ground Excursion,0.9890791177749634,0.7760252365930599,0.8395904436860068,0.8065573770491803,293.0,0.7045454972573634,0.24
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.7045454972573634,0.2
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",micro avg,0.9400476217269896,0.7865863787375416,0.8281666739539154,0.8068411748418566,22871.0,0.7045454972573634,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",macro avg,0.9400476217269896,0.6988862198762856,0.7128064696825411,0.7045454972573634,22871.0,0.7045454972573634,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",weighted avg,0.9400476217269896,0.7847584492108464,0.8281666739539154,0.8043607309597388,22871.0,0.7045454972573634,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE",samples avg,0.9400476217269896,0.81487582909147,0.8559824596196646,0.8045765304673218,22871.0,0.7045454972573634,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation / Discrepancy - Procedural,0.7812123894691467,0.775439568046518,0.8830206526880026,0.8257408226448474,6343.0,0.7137387249742578,0.26
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Aircraft Equipment,0.9148542284965516,0.8913985854437599,0.8979544932199495,0.8946645294252347,4351.0,0.7137387249742578,0.39
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Conflict,0.955761194229126,0.8575803981623277,0.8940926024481107,0.8754559666492965,1879.0,0.7137387249742578,0.52
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Inflight Event / Encounter,0.9003239274024963,0.7797173732335827,0.7742468014857614,0.7769724580658521,2423.0,0.7137387249742578,0.35
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",ATC Issue,0.915039360523224,0.8044798785117692,0.8402061855670103,0.821955003878976,2522.0,0.7137387249742578,0.46
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Altitude,0.9529847502708436,0.735966735966736,0.735966735966736,0.735966735966736,962.0,0.7137387249742578,0.32
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Track / Heading,0.9579824209213256,0.7625,0.6979405034324943,0.7287933094384708,874.0,0.7137387249742578,0.43
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Event / Encounter,0.9431744813919068,0.6842105263157895,0.6912065439672802,0.6876907426246186,978.0,0.7137387249742578,0.37
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Flight Deck / Cabin / Aircraft Event,0.9614067673683168,0.8088050314465409,0.7081497797356828,0.7551379917792131,908.0,0.7137387249742578,0.34
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Incursion,0.976029634475708,0.7035490605427975,0.7422907488986784,0.7224008574490889,454.0,0.7137387249742578,0.36
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Airspace Violation,0.9774178862571716,0.7382352941176471,0.6182266009852216,0.6729222520107239,406.0,0.7137387249742578,0.23
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Speed,0.974086046218872,0.6128364389233955,0.7609254498714653,0.6788990825688073,389.0,0.7137387249742578,0.2
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",Ground Excursion,0.990467369556427,0.8571428571428571,0.7781569965870307,0.8157423971377459,293.0,0.7137387249742578,0.7000000000000001
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.7137387249742578,0.17
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",micro avg,0.9423216581344604,0.7982123281895607,0.8277731625202221,0.8127240335701561,22871.0,0.7137387249742578,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",macro avg,0.9423216581344604,0.7151329819895516,0.7158845782038161,0.7137387249742578,22871.0,0.7137387249742578,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",weighted avg,0.9423216581344604,0.796348403679598,0.8277731625202221,0.8105631077314642,22871.0,0.7137387249742578,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE",samples avg,0.9423216581344604,0.8228351072034552,0.8557865626583813,0.8092634405545095,22871.0,0.7137387249742578,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Deviation / Discrepancy - Procedural,0.7833410501480103,0.7745609220636663,0.8899574333911399,0.8282591152519991,6343.0,0.7203264472199604,0.38
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Aircraft Equipment,0.9143914580345154,0.8840807174887892,0.9062284532291428,0.895017591646805,4351.0,0.7203264472199604,0.38
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Conflict,0.9587228298187256,0.8769068911099421,0.8871740287386908,0.8820105820105819,1879.0,0.7203264472199604,0.37
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Inflight Event / Encounter,0.9040259122848512,0.7814784727863525,0.7940569541890219,0.7877175025588536,2423.0,0.7203264472199604,0.44
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",ATC Issue,0.9118926525115968,0.7803571428571429,0.8663758921490881,0.821119879744457,2522.0,0.7203264472199604,0.33
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Altitude,0.9525219798088074,0.7156580211335255,0.7744282744282744,0.743884173739391,962.0,0.7203264472199604,0.45
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Track / Heading,0.956223964691162,0.7250280583613917,0.7391304347826086,0.7320113314447593,874.0,0.7203264472199604,0.32
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Ground Event / Encounter,0.9408606886863708,0.6485539000876425,0.7566462167689162,0.6984426616328457,978.0,0.7203264472199604,0.25
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Flight Deck / Cabin / Aircraft Event,0.9594632387161256,0.7908415841584159,0.7037444933920705,0.7447552447552447,908.0,0.7203264472199604,0.34
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Ground Incursion,0.9724201560020448,0.6291390728476821,0.8370044052863436,0.7183364839319472,454.0,0.7203264472199604,0.11
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Airspace Violation,0.9774178862571716,0.6919431279620853,0.7192118226600985,0.7053140096618358,406.0,0.7203264472199604,0.28
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Deviation - Speed,0.9774178862571716,0.6835443037974683,0.6940874035989717,0.6887755102040816,389.0,0.7203264472199604,0.44
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",Ground Excursion,0.9911152124404908,0.8250825082508251,0.8532423208191127,0.8389261744966443,293.0,0.7203264472199604,0.32
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.7203264472199604,0.36
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",micro avg,0.9422555565834044,0.7883015173764072,0.8450002186174632,0.8156667440437251,22871.0,0.7203264472199604,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",macro avg,0.9422555565834044,0.7005124802074949,0.7443777238166772,0.7203264472199604,22871.0,0.7203264472199604,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",weighted avg,0.9422555565834044,0.7877958813714403,0.8450002186174632,0.8143763410726069,22871.0,0.7203264472199604,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE",samples avg,0.9422555565834044,0.8162429210462528,0.8692294131905423,0.8128753245828674,22871.0,0.7203264472199604,
+bert-base-uncased_BCE,Deviation / Discrepancy - Procedural,0.6480333209037781,0.6344769165607793,0.944663408481791,0.7591055932096027,6343.0,0.3096424897968695,0.47
+bert-base-uncased_BCE,Aircraft Equipment,0.6434983611106873,0.5384852691655098,0.8023442886692714,0.6444526490677496,4351.0,0.3096424897968695,0.36
+bert-base-uncased_BCE,Conflict,0.7290143370628357,0.3525442788867022,0.6673762639701969,0.4613686534216335,1879.0,0.3096424897968695,0.19
+bert-base-uncased_BCE,Inflight Event / Encounter,0.5826006531715393,0.3077914901455148,0.6896409409822534,0.4256240448293428,2423.0,0.3096424897968695,0.17
+bert-base-uncased_BCE,ATC Issue,0.6715409755706787,0.389164688107058,0.7149088025376685,0.5039832285115303,2522.0,0.3096424897968695,0.19
+bert-base-uncased_BCE,Deviation - Altitude,0.7632577419281006,0.1638584667228306,0.4043659043659043,0.2332134292565947,962.0,0.3096424897968695,0.09
+bert-base-uncased_BCE,Deviation - Track / Heading,0.570661723613739,0.1141627382660381,0.6372997711670481,0.1936381018598991,874.0,0.3096424897968695,0.08
+bert-base-uncased_BCE,Ground Event / Encounter,0.8399814963340759,0.2594490711082639,0.4141104294478527,0.3190232374950768,978.0,0.3096424897968695,0.1
+bert-base-uncased_BCE,Flight Deck / Cabin / Aircraft Event,0.877741813659668,0.3016330451488953,0.3458149779735683,0.3222165212929708,908.0,0.3096424897968695,0.1
+bert-base-uncased_BCE,Ground Incursion,0.7994446754455566,0.0778708723509117,0.3480176211453744,0.1272654047523157,454.0,0.3096424897968695,0.07
+bert-base-uncased_BCE,Airspace Violation,0.8779268860816956,0.1013100436681222,0.2857142857142857,0.1495809155383623,406.0,0.3096424897968695,0.06
+bert-base-uncased_BCE,Deviation - Speed,0.3034706115722656,0.0417362270450751,0.8354755784061697,0.0795009784735812,389.0,0.3096424897968695,0.02
+bert-base-uncased_BCE,Ground Excursion,0.9407681822776794,0.0974477958236658,0.1433447098976109,0.1160220994475138,293.0,0.3096424897968695,0.03
+bert-base-uncased_BCE,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.3096424897968695,0.0
+bert-base-uncased_BCE,micro avg,0.7314073443412781,0.3251826039021125,0.7221809278125136,0.4484415725456125,22871.0,0.3096424897968695,
+bert-base-uncased_BCE,macro avg,0.7314073443412781,0.2414236359285262,0.5166483559113569,0.3096424897968695,22871.0,0.3096424897968695,
+bert-base-uncased_BCE,weighted avg,0.7314073443412781,0.422518745878416,0.7221809278125136,0.5233641627097276,22871.0,0.3096424897968695,
+bert-base-uncased_BCE,samples avg,0.7314073443412781,0.3611640521543344,0.7414572177783653,0.4499407148458514,22871.0,0.3096424897968695,
+bert-base-uncased_BCE-Balanced,Deviation / Discrepancy - Procedural,0.6558074951171875,0.6441758241758242,0.924168374586158,0.7591789160137279,6343.0,0.3329869275941396,0.39
+bert-base-uncased_BCE-Balanced,Aircraft Equipment,0.6767237186431885,0.5785714285714286,0.7260399908067111,0.6439710528998064,4351.0,0.3329869275941396,0.49
+bert-base-uncased_BCE-Balanced,Conflict,0.734104573726654,0.355270821199767,0.6492815327301756,0.4592508940335028,1879.0,0.3329869275941396,0.49
+bert-base-uncased_BCE-Balanced,Inflight Event / Encounter,0.5366959571838379,0.2936571337274325,0.7585637639290136,0.423404745450357,2423.0,0.3329869275941396,0.49
+bert-base-uncased_BCE-Balanced,ATC Issue,0.6684868335723877,0.3897211818560133,0.7426645519429025,0.5111899563318777,2522.0,0.3329869275941396,0.53
+bert-base-uncased_BCE-Balanced,Deviation - Altitude,0.7626098990440369,0.1792717086834734,0.4656964656964657,0.2588847154001734,962.0,0.3329869275941396,0.51
+bert-base-uncased_BCE-Balanced,Deviation - Track / Heading,0.7251272797584534,0.1440217391304347,0.4851258581235698,0.2221058145625982,874.0,0.3329869275941396,0.51
+bert-base-uncased_BCE-Balanced,Ground Event / Encounter,0.8348912596702576,0.2575210589651023,0.4376278118609407,0.3242424242424243,978.0,0.3329869275941396,0.56
+bert-base-uncased_BCE-Balanced,Flight Deck / Cabin / Aircraft Event,0.8417399525642395,0.2545899632802937,0.4581497797356828,0.3273013375295043,908.0,0.3329869275941396,0.5700000000000001
+bert-base-uncased_BCE-Balanced,Ground Incursion,0.8379454016685486,0.0872056015276893,0.3017621145374449,0.1353086419753086,454.0,0.3329869275941396,0.59
+bert-base-uncased_BCE-Balanced,Airspace Violation,0.9291994571685792,0.1823008849557522,0.2536945812807882,0.2121524201853759,406.0,0.3329869275941396,0.59
+bert-base-uncased_BCE-Balanced,Deviation - Speed,0.8814437985420227,0.0900735294117647,0.2519280205655527,0.1327014218009478,389.0,0.3329869275941396,0.5700000000000001
+bert-base-uncased_BCE-Balanced,Ground Excursion,0.9511337280273438,0.2154963680387409,0.3037542662116041,0.2521246458923513,293.0,0.3329869275941396,0.61
+bert-base-uncased_BCE-Balanced,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.3329869275941396,0.63
+bert-base-uncased_BCE-Balanced,micro avg,0.7876908183097839,0.3884397248702787,0.7037296139215601,0.5005753739930955,22871.0,0.3329869275941396,
+bert-base-uncased_BCE-Balanced,macro avg,0.7876908183097839,0.2622769459659798,0.4827469365719292,0.3329869275941396,22871.0,0.3329869275941396,
+bert-base-uncased_BCE-Balanced,weighted avg,0.7876908183097839,0.4354193377814851,0.7037296139215601,0.5301900562867359,22871.0,0.3329869275941396,
+bert-base-uncased_BCE-Balanced,samples avg,0.7876908183097839,0.4205508913421917,0.7250336043718737,0.4943017926081322,22871.0,0.3329869275941396,
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Deviation / Discrepancy - Procedural,0.7247570753097534,0.7125015768891132,0.8904303957118083,0.7915907498248074,6343.0,0.5422335201387303,0.29
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Aircraft Equipment,0.8537713885307312,0.8116985376827897,0.8292346586991496,0.8203728967712597,4351.0,0.5422335201387303,0.5700000000000001
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Conflict,0.8922721147537231,0.6514188903007201,0.8185204896221394,0.7254716981132076,1879.0,0.5422335201387303,0.67
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Inflight Event / Encounter,0.798426628112793,0.540045766590389,0.6817994222038795,0.6026997446187522,2423.0,0.5422335201387303,0.65
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,ATC Issue,0.8495141267776489,0.6403508771929824,0.8104678826328311,0.7154357717885894,2522.0,0.5422335201387303,0.65
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Deviation - Altitude,0.8977325558662415,0.4421988682295877,0.5686070686070686,0.4974988631195998,962.0,0.5422335201387303,0.8300000000000001
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Deviation - Track / Heading,0.9076353311538696,0.4318681318681319,0.4496567505720824,0.4405829596412556,874.0,0.5422335201387303,0.76
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Ground Event / Encounter,0.9160574078559875,0.5312225153913809,0.6175869120654397,0.5711583924349882,978.0,0.5422335201387303,0.79
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Flight Deck / Cabin / Aircraft Event,0.9417862296104432,0.6790757381258024,0.5825991189427313,0.6271487848251335,908.0,0.5422335201387303,0.86
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Ground Incursion,0.95085608959198,0.4406779661016949,0.6299559471365639,0.5185856754306438,454.0,0.5422335201387303,0.81
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Airspace Violation,0.9351226091384888,0.2937062937062937,0.5172413793103449,0.3746654772524532,406.0,0.5422335201387303,0.84
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Deviation - Speed,0.950023114681244,0.3397027600849256,0.4113110539845758,0.3720930232558139,389.0,0.5422335201387303,0.86
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,Ground Excursion,0.9726978540420532,0.4970588235294118,0.5767918088737202,0.5339652448657188,293.0,0.5422335201387303,0.95
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.5422335201387303,0.94
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,micro avg,0.8987440466880798,0.6387480714128279,0.7602640898955009,0.69422873455373,22871.0,0.5422335201387303,
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,macro avg,0.8987440466880798,0.5008233389780873,0.598871634883024,0.5422335201387303,22871.0,0.5422335201387303,
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,weighted avg,0.8987440466880798,0.6442520811880731,0.7602640898955009,0.6951506238939972,22871.0,0.5422335201387303,
+NASA-AIML_MIKA_SafeAeroBERT_BCE-Balanced,samples avg,0.8987440466880798,0.6834635640466274,0.793966197307243,0.6932344066032173,22871.0,0.5422335201387303,
+allenai_longformer-base-4096_BCE-Balanced,Deviation / Discrepancy - Procedural,0.7022674679756165,0.6945966135458167,0.8795522623364339,0.7762086956521739,6343.0,0.4734315710968664,0.38
+allenai_longformer-base-4096_BCE-Balanced,Aircraft Equipment,0.7936140894889832,0.7064434494841347,0.834061135371179,0.7649662731871837,4351.0,0.4734315710968664,0.49
+allenai_longformer-base-4096_BCE-Balanced,Conflict,0.8581212162971497,0.5720233139050791,0.7312400212879191,0.6419060967063771,1879.0,0.4734315710968664,0.61
+allenai_longformer-base-4096_BCE-Balanced,Inflight Event / Encounter,0.7247570753097534,0.4311077769442361,0.7115146512587701,0.5369043911554033,2423.0,0.4734315710968664,0.56
+allenai_longformer-base-4096_BCE-Balanced,ATC Issue,0.8157334327697754,0.5777452415812592,0.7823156225218081,0.6646454438268486,2522.0,0.4734315710968664,0.62
+allenai_longformer-base-4096_BCE-Balanced,Deviation - Altitude,0.8638592958450317,0.3375877472878111,0.5498960498960499,0.4183471727955714,962.0,0.4734315710968664,0.61
+allenai_longformer-base-4096_BCE-Balanced,Deviation - Track / Heading,0.8360943794250488,0.2597750401713979,0.5549199084668193,0.35388544326888,874.0,0.4734315710968664,0.5700000000000001
+allenai_longformer-base-4096_BCE-Balanced,Ground Event / Encounter,0.8814437985420227,0.3964456596035543,0.5930470347648262,0.4752150757886111,978.0,0.4734315710968664,0.71
+allenai_longformer-base-4096_BCE-Balanced,Flight Deck / Cabin / Aircraft Event,0.9170754551887512,0.5054249547920434,0.6156387665198237,0.5551142005958293,908.0,0.4734315710968664,0.73
+allenai_longformer-base-4096_BCE-Balanced,Ground Incursion,0.9168903231620787,0.2806324110671936,0.6255506607929515,0.3874488403819918,454.0,0.4734315710968664,0.63
+allenai_longformer-base-4096_BCE-Balanced,Airspace Violation,0.9392873644828796,0.2759856630824372,0.3793103448275862,0.3195020746887967,406.0,0.4734315710968664,0.75
+allenai_longformer-base-4096_BCE-Balanced,Deviation - Speed,0.9292920231819152,0.2065727699530516,0.3393316195372751,0.2568093385214008,389.0,0.4734315710968664,0.6900000000000001
+allenai_longformer-base-4096_BCE-Balanced,Ground Excursion,0.9640907049179076,0.3942093541202672,0.6040955631399317,0.477088948787062,293.0,0.4734315710968664,0.8300000000000001
+allenai_longformer-base-4096_BCE-Balanced,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.4734315710968664,0.89
+allenai_longformer-base-4096_BCE-Balanced,micro avg,0.8667349815368652,0.5428490172533653,0.7511258799352892,0.63022543426821,22871.0,0.4734315710968664,
+allenai_longformer-base-4096_BCE-Balanced,macro avg,0.8667349815368652,0.4027535711098773,0.5857481171943839,0.4734315710968664,22871.0,0.4734315710968664,
+allenai_longformer-base-4096_BCE-Balanced,weighted avg,0.8667349815368652,0.563587563823494,0.7511258799352892,0.6410306555208096,22871.0,0.4734315710968664,
+allenai_longformer-base-4096_BCE-Balanced,samples avg,0.8667349815368652,0.5992009504711957,0.7815729049602256,0.632958255945299,22871.0,0.4734315710968664,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation / Discrepancy - Procedural,0.766126811504364,0.7707919386886176,0.8562194545167902,0.8112629770707297,6343.0,0.6939472081875458,0.36
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Aircraft Equipment,0.906247079372406,0.8908665105386416,0.8742817743047575,0.8824962301357151,4351.0,0.6939472081875458,0.54
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Conflict,0.9486348628997804,0.8270750988142292,0.8908994145822245,0.8578016910069178,1879.0,0.6939472081875458,0.79
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Inflight Event / Encounter,0.8964368104934692,0.7788708297690333,0.7515476681799422,0.7649653434152489,2423.0,0.6939472081875458,0.78
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",ATC Issue,0.9022674560546876,0.7720861172976986,0.8247422680412371,0.7975460122699386,2522.0,0.6939472081875458,0.8300000000000001
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Altitude,0.945210576057434,0.6741996233521658,0.7442827442827443,0.7075098814229249,962.0,0.6939472081875458,0.89
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Track / Heading,0.949652910232544,0.6825221238938053,0.7059496567505721,0.6940382452193475,874.0,0.6939472081875458,0.85
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Event / Encounter,0.9398426413536072,0.6529850746268657,0.7157464212678937,0.6829268292682927,978.0,0.6939472081875458,0.8300000000000001
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Flight Deck / Cabin / Aircraft Event,0.9579824209213256,0.763953488372093,0.723568281938326,0.7432126696832578,908.0,0.6939472081875458,0.87
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Incursion,0.9725127220153807,0.6394316163410302,0.7929515418502202,0.7079646017699114,454.0,0.6939472081875458,0.93
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Airspace Violation,0.9724201560020448,0.6273584905660378,0.6551724137931034,0.6409638554216867,406.0,0.6939472081875458,0.93
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Speed,0.9734382033348083,0.6307692307692307,0.6323907455012854,0.631578947368421,389.0,0.6939472081875458,0.96
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Excursion,0.9879685044288636,0.7432835820895523,0.8498293515358362,0.7929936305732485,293.0,0.6939472081875458,0.95
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.6939472081875458,0.96
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",micro avg,0.9364644885063172,0.7764573430072554,0.8141751563114862,0.7948690585448103,22871.0,0.6939472081875458,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",macro avg,0.9364644885063172,0.6752995517942143,0.7155415526103523,0.6939472081875458,22871.0,0.6939472081875458,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",weighted avg,0.9364644885063172,0.7756253394765267,0.8141751563114862,0.7936664633141725,22871.0,0.6939472081875458,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BCE-Balanced",samples avg,0.9364644885063172,0.806535554527225,0.8446550318415196,0.7935258314619722,22871.0,0.6939472081875458,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation / Discrepancy - Procedural,0.7743636965751648,0.7709923664122137,0.8757685637710863,0.8200472394449365,6343.0,0.7054444812633761,0.28
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Aircraft Equipment,0.9105969667434692,0.8900668356764231,0.8876120432084579,0.888837744533947,4351.0,0.7054444812633761,0.56
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Conflict,0.95122629404068,0.8491735537190083,0.8749334752527941,0.8618610747051114,1879.0,0.7054444812633761,0.84
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Inflight Event / Encounter,0.8985654711723328,0.7729329494035376,0.7754849360297152,0.7742068397198187,2423.0,0.7054444812633761,0.73
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",ATC Issue,0.906617283821106,0.7691213091426539,0.8572561459159397,0.8108006750421901,2522.0,0.7054444812633761,0.73
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Altitude,0.9495604038238524,0.698005698005698,0.764033264033264,0.7295285359801489,962.0,0.7054444812633761,0.95
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Track / Heading,0.9509486556053162,0.684154175588865,0.7311212814645309,0.7068584070796461,874.0,0.7054444812633761,0.88
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Event / Encounter,0.9431744813919068,0.6827309236947792,0.6952965235173824,0.6889564336372848,978.0,0.7054444812633761,0.9
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Flight Deck / Cabin / Aircraft Event,0.9584451913833618,0.7647058823529411,0.7301762114537445,0.7470422535211267,908.0,0.7054444812633761,0.91
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Incursion,0.9733456969261168,0.6531365313653137,0.7797356828193832,0.710843373493976,454.0,0.7054444812633761,0.91
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Airspace Violation,0.9761221408843994,0.7,0.6379310344827587,0.6675257731958762,406.0,0.7054444812633761,0.92
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Speed,0.9747339487075806,0.6367924528301887,0.6940874035989717,0.6642066420664207,389.0,0.7054444812633761,0.96
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Excursion,0.9895418882369996,0.8125,0.7986348122866894,0.8055077452667815,293.0,0.7054444812633761,0.99
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.7054444812633761,0.99
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",micro avg,0.9392146468162536,0.782608695652174,0.8279480564907524,0.8046401937663331,22871.0,0.7054444812633761,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",macro avg,0.9392146468162536,0.6917366198708301,0.7215765269881942,0.7054444812633761,22871.0,0.7054444812633761,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",weighted avg,0.9392146468162536,0.7813046098801217,0.8279480564907524,0.8031531226024494,22871.0,0.7054444812633761,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BCE-Balanced",samples avg,0.9392146468162536,0.8105321610365571,0.8550646746435734,0.8010486690542221,22871.0,0.7054444812633761,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation / Discrepancy - Procedural,0.7729754447937012,0.7726380712082983,0.8689894371748385,0.8179861987089115,6343.0,0.7067974126133871,0.27
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Aircraft Equipment,0.9055067300796508,0.8810068649885584,0.8848540565387267,0.882926269923174,4351.0,0.7067974126133871,0.61
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Conflict,0.9522443413734436,0.847526772055074,0.8845130388504524,0.8656250000000001,1879.0,0.7067974126133871,0.85
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Inflight Event / Encounter,0.900138795375824,0.7823529411764706,0.7684688402806439,0.7753487403706018,2423.0,0.7067974126133871,0.74
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",ATC Issue,0.909301221370697,0.7868303571428571,0.8386201427438541,0.8119001919385797,2522.0,0.7067974126133871,0.74
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Altitude,0.951318860054016,0.7219959266802444,0.737006237006237,0.7294238683127572,962.0,0.7067974126133871,0.88
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Track / Heading,0.95122629404068,0.6740220661985958,0.7688787185354691,0.718332442544094,874.0,0.7067974126133871,0.86
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Event / Encounter,0.9403979778289796,0.6557835820895522,0.7188139059304703,0.6858536585365853,978.0,0.7067974126133871,0.8200000000000001
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Flight Deck / Cabin / Aircraft Event,0.9608514308929444,0.8035043804755945,0.7070484581497798,0.7521968365553603,908.0,0.7067974126133871,0.92
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Incursion,0.9732531309127808,0.6620825147347741,0.7422907488986784,0.6998961578400831,454.0,0.7067974126133871,0.91
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Airspace Violation,0.9735307693481444,0.6435406698564593,0.6625615763546798,0.6529126213592233,406.0,0.7067974126133871,0.92
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Deviation - Speed,0.975289225578308,0.6276150627615062,0.7712082262210797,0.6920415224913493,389.0,0.7067974126133871,0.93
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",Ground Excursion,0.9895418882369996,0.7960526315789473,0.825938566552901,0.8107202680067002,293.0,0.7067974126133871,0.96
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.7067974126133871,0.92
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",micro avg,0.9390956163406372,0.7834550888261663,0.8252809234401643,0.8038242872048209,22871.0,0.7067974126133871,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",macro avg,0.9390956163406372,0.6896394172104952,0.7270851395169864,0.7067974126133871,22871.0,0.7067974126133871,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",weighted avg,0.9390956163406372,0.782671358458894,0.8252809234401643,0.8025778850195103,22871.0,0.7067974126133871,
+"allenai_longformer-base-4096_Unfrozen[8, 9, 10, 11]_BCE-Balanced",samples avg,0.9390956163406372,0.814618673012935,0.8514420131773208,0.8020223989081,22871.0,0.7067974126133871,
+bert-base-uncased_BinaryFocal,Deviation / Discrepancy - Procedural,0.587043046951294,0.587043035631652,1.0,0.7397947282481923,6343.0,0.2332405673539218,0.0
+bert-base-uncased_BinaryFocal,Aircraft Equipment,0.4026839435100555,0.4026839426191578,1.0,0.574162048033782,4351.0,0.2332405673539218,0.5
+bert-base-uncased_BinaryFocal,Conflict,0.1739009767770767,0.1739009717723276,1.0,0.2962787764112267,1879.0,0.2332405673539218,0.5
+bert-base-uncased_BinaryFocal,Inflight Event / Encounter,0.2244331389665603,0.2242895491992965,1.0,0.3663995161046424,2423.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,ATC Issue,0.2334104627370834,0.2334104581212401,1.0,0.3784797778944999,2522.0,0.2332405673539218,0.5
+bert-base-uncased_BinaryFocal,Deviation - Altitude,0.0893105044960975,0.0890575819292723,1.0,0.1635498129887793,962.0,0.2332405673539218,0.98
+bert-base-uncased_BinaryFocal,Deviation - Track / Heading,0.0813512280583381,0.0809259259259259,1.0,0.1497344526297755,874.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Ground Event / Encounter,0.0908838510513305,0.090547171558189,1.0,0.1660582392393242,978.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Flight Deck / Cabin / Aircraft Event,0.0848681181669235,0.0841052241570952,1.0,0.1551606288448393,908.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Ground Incursion,0.0434983819723129,0.0420798961905644,1.0,0.0807613626256337,454.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Airspace Violation,0.0384081453084945,0.0376065209336791,1.0,0.072487055882878,406.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Deviation - Speed,0.0376677475869655,0.0360619263928803,1.0,0.069613457408733,389.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,Ground Excursion,0.0287829712033271,0.0271623250208584,1.0,0.0528880866425992,293.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.2332405673539218,0.99
+bert-base-uncased_BinaryFocal,micro avg,0.222000390291214,0.1622869191699731,0.9961086091556992,0.2791022468331169,22871.0,0.2332405673539218,
+bert-base-uncased_BinaryFocal,macro avg,0.222000390291214,0.150633894960867,0.9285714285714286,0.2332405673539218,22871.0,0.2332405673539218,
+bert-base-uncased_BinaryFocal,weighted avg,0.222000390291214,0.3197171522784615,0.9961086091556992,0.4499095697092828,22871.0,0.2332405673539218,
+bert-base-uncased_BinaryFocal,samples avg,0.222000390291214,0.1623834135425991,0.9888631806262532,0.2721498364794024,22871.0,0.2332405673539218,
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Deviation / Discrepancy - Procedural,0.5871356129646301,0.5870973713439467,1.0,0.7398378725141425,6343.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Aircraft Equipment,0.4027764797210693,0.40272121436505,1.0,0.5741999340151764,4351.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Conflict,0.1743637174367904,0.1739814814814815,1.0,0.2963956147961196,1879.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Inflight Event / Encounter,0.2248033285140991,0.2243726270951014,1.0,0.366510361518681,2423.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,ATC Issue,0.2345210611820221,0.2336699712776799,1.0,0.3788208787082238,2522.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Deviation - Altitude,0.0913465991616249,0.0891631100389682,0.998960498960499,0.1637137989778535,962.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Deviation - Track / Heading,0.0851457640528678,0.0812343154568268,1.0,0.1502621851628986,874.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Ground Event / Encounter,0.0909764021635055,0.0905555555555555,1.0,0.1660723382577687,978.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Flight Deck / Cabin / Aircraft Event,0.0840351656079292,0.0840351689032855,1.0,0.1550414069836933,908.0,0.2333804660694028,0.5
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Ground Incursion,0.0463674217462539,0.0422011526306004,1.0,0.0809846592936139,454.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Airspace Violation,0.0410920865833759,0.0376219228982814,0.9975369458128078,0.0725091755438188,406.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Deviation - Speed,0.0482184179127216,0.0362733152122973,0.9948586118251928,0.069994574064026,389.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,Ground Excursion,0.0306339655071496,0.0272127797900993,1.0,0.0529837251356238,293.0,0.2333804660694028,0.99
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.2333804660694028,0.97
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,micro avg,0.2237985134124755,0.1625827081890921,0.995933715185169,0.2795326804604472,22871.0,0.2333804660694028,
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,macro avg,0.2237985134124755,0.1507242847177981,0.92795400404275,0.2333804660694028,22871.0,0.2333804660694028,
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,weighted avg,0.2237985134124755,0.3198040678241344,0.995933715185169,0.4500231651739385,22871.0,0.2333804660694028,
+NASA-AIML_MIKA_SafeAeroBERT_BinaryFocal,samples avg,0.2237985134124755,0.1627246934257577,0.9887089310504396,0.2726386987405922,22871.0,0.2333804660694028,
+allenai_longformer-base-4096_BinaryFocal,Deviation / Discrepancy - Procedural,0.587043046951294,0.587043035631652,1.0,0.7397947282481923,6343.0,0.2331900336676712,0.0
+allenai_longformer-base-4096_BinaryFocal,Aircraft Equipment,0.4026839435100555,0.4026839426191578,1.0,0.574162048033782,4351.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Conflict,0.1739009767770767,0.1739009717723276,1.0,0.2962787764112267,1879.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Inflight Event / Encounter,0.2242480367422104,0.2242480333179083,1.0,0.3663441185364378,2423.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,ATC Issue,0.2334104627370834,0.2334104581212401,1.0,0.3784797778944999,2522.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Deviation - Altitude,0.0890328586101532,0.0890328551596483,1.0,0.1635081159173961,962.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Deviation - Track / Heading,0.0808884799480438,0.0808884775566867,1.0,0.1496703484887404,874.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Ground Event / Encounter,0.0905136540532112,0.0905136510874595,1.0,0.1660018670966646,978.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Flight Deck / Cabin / Aircraft Event,0.0840351656079292,0.0840351689032855,1.0,0.1550414069836933,908.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Ground Incursion,0.0420175828039646,0.0420175844516427,1.0,0.0806465938360422,454.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Airspace Violation,0.0375751964747905,0.0375751966682091,1.0,0.0724288645080724,406.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Deviation - Speed,0.0360018499195575,0.0360018509949097,1.0,0.0695015186707164,389.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,Ground Excursion,0.0271170753985643,0.0271170754280425,1.0,0.0528023067219318,293.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.2331900336676712,0.5
+allenai_longformer-base-4096_BinaryFocal,micro avg,0.2214450985193252,0.1621898693624746,0.9961086091556992,0.2789587108781897,22871.0,0.2331900336676712,
+allenai_longformer-base-4096_BinaryFocal,macro avg,0.2214450985193252,0.1506048786937264,0.9285714285714286,0.2331900336676712,22871.0,0.2331900336676712,
+allenai_longformer-base-4096_BinaryFocal,weighted avg,0.2214450985193252,0.3197026737755414,0.9961086091556992,0.4498860393988623,22871.0,0.2331900336676712,
+allenai_longformer-base-4096_BinaryFocal,samples avg,0.2214450985193252,0.1621898693624746,0.9888631806262532,0.2719189092947229,22871.0,0.2331900336676712,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation / Discrepancy - Procedural,0.587043046951294,0.587043035631652,1.0,0.7397947282481923,6343.0,0.2331900336676712,0.0
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Aircraft Equipment,0.4026839435100555,0.4026839426191578,1.0,0.574162048033782,4351.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Conflict,0.1739009767770767,0.1739009717723276,1.0,0.2962787764112267,1879.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Inflight Event / Encounter,0.2242480367422104,0.2242480333179083,1.0,0.3663441185364378,2423.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",ATC Issue,0.2334104627370834,0.2334104581212401,1.0,0.3784797778944999,2522.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Altitude,0.0890328586101532,0.0890328551596483,1.0,0.1635081159173961,962.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Track / Heading,0.0808884799480438,0.0808884775566867,1.0,0.1496703484887404,874.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Event / Encounter,0.0905136540532112,0.0905136510874595,1.0,0.1660018670966646,978.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Flight Deck / Cabin / Aircraft Event,0.0840351656079292,0.0840351689032855,1.0,0.1550414069836933,908.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Incursion,0.0420175828039646,0.0420175844516427,1.0,0.0806465938360422,454.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Airspace Violation,0.0375751964747905,0.0375751966682091,1.0,0.0724288645080724,406.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Speed,0.0360018499195575,0.0360018509949097,1.0,0.0695015186707164,389.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Excursion,0.0271170753985643,0.0271170754280425,1.0,0.0528023067219318,293.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.2331900336676712,0.5
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",micro avg,0.2214450985193252,0.1621898693624746,0.9961086091556992,0.2789587108781897,22871.0,0.2331900336676712,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",macro avg,0.2214450985193252,0.1506048786937264,0.9285714285714286,0.2331900336676712,22871.0,0.2331900336676712,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",weighted avg,0.2214450985193252,0.3197026737755414,0.9961086091556992,0.4498860393988623,22871.0,0.2331900336676712,
+"bert-base-uncased_Unfrozen[8, 9, 10, 11]_BinaryFocal",samples avg,0.2214450985193252,0.1621898693624746,0.9888631806262532,0.2719189092947229,22871.0,0.2331900336676712,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation / Discrepancy - Procedural,0.587043046951294,0.587043035631652,1.0,0.7397947282481923,6343.0,0.2331900336676712,0.0
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Aircraft Equipment,0.40268394351005554,0.4026839426191578,1.0,0.574162048033782,4351.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Conflict,0.17390097677707672,0.17390097177232763,1.0,0.29627877641122674,1879.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Inflight Event / Encounter,0.2242480367422104,0.22424803331790838,1.0,0.36634411853643783,2423.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",ATC Issue,0.23341046273708344,0.23341045812124017,1.0,0.3784797778944999,2522.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Altitude,0.0890328586101532,0.08903285515964832,1.0,0.1635081159173961,962.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Track / Heading,0.08088847994804382,0.08088847755668672,1.0,0.14967034848874047,874.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Event / Encounter,0.09051365405321121,0.09051365108745951,1.0,0.16600186709666467,978.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Flight Deck / Cabin / Aircraft Event,0.08403516560792923,0.08403516890328551,1.0,0.15504140698369334,908.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Incursion,0.042017582803964615,0.042017584451642755,1.0,0.08064659383604227,454.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Airspace Violation,0.03757519647479057,0.03757519666820916,1.0,0.07242886450807243,406.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Deviation - Speed,0.03600184991955757,0.03600185099490976,1.0,0.06950151867071644,389.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",Ground Excursion,0.02711707539856434,0.027117075428042575,1.0,0.05280230672193188,293.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",No Specific Anomaly Occurred,0.9917630553245544,0.0,0.0,0.0,89.0,0.2331900336676712,0.5
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",micro avg,0.22144509851932526,0.16218986936247465,0.9961086091556993,0.27895871087818974,22871.0,0.2331900336676712,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",macro avg,0.22144509851932526,0.15060487869372643,0.9285714285714286,0.2331900336676712,22871.0,0.2331900336676712,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",weighted avg,0.22144509851932526,0.31970267377554146,0.9961086091556993,0.44988603939886235,22871.0,0.2331900336676712,
+"NASA-AIML_MIKA_SafeAeroBERT_Unfrozen[8, 9, 10, 11]_BinaryFocal",samples avg,0.22144509851932526,0.16218986936247462,0.9888631806262533,0.2719189092947229,22871.0,0.2331900336676712,

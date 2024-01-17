@@ -18,3 +18,10 @@ False,BinaryFocal,True,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
 False,BinaryFocal,True,,allenai/longformer-base-4096,32,5,2e-05,1024
 False,BinaryFocal,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
 False,BinaryFocal,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024
+True,BCE,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+True,BCE,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+True,BCE,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024
+True,BinaryFocal,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+True,BinaryFocal,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+True,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024

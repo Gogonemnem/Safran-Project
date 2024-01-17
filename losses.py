@@ -24,6 +24,6 @@ def loss(model, name='BCE', balance=False, dataset=None, dataloader=None, device
     if name == 'BCE':
         return torch.nn.BCEWithLogitsLoss(pos_weight=pos_weight)
     elif name == 'BinaryFocal':
-        return BinaryFocalLossWithLogits(pos_weight=pos_weight, gamma=0.5, alpha=1, reduction='mean')
+        return BinaryFocalLossWithLogits(pos_weight=pos_weight, gamma=2, alpha=1, reduction='sum')
     else:
         raise ValueError("loss not known")

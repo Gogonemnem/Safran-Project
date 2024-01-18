@@ -1,0 +1,27 @@
+Abbreviation,Loss Type,Balanced,Layers to Unfreeze,Encoder Name,Batch Size,Epochs,Learning Rate,Max Length
+False,BCE,False,,bert-base-uncased,32,5,2e-05,512
+False,BCE,False,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BCE,False,,allenai/longformer-base-4096,32,5,2e-05,1024
+False,BCE,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+False,BCE,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BCE,False,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024
+False,BCE,True,,bert-base-uncased,32,5,2e-05,512
+False,BCE,True,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BCE,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+False,BCE,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,False,,bert-base-uncased,32,5,2e-05,512
+False,BinaryFocal,False,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+False,BinaryFocal,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,True,,bert-base-uncased,32,5,2e-05,512
+False,BinaryFocal,True,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,True,,allenai/longformer-base-4096,32,5,2e-05,1024
+False,BinaryFocal,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+False,BinaryFocal,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+False,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024
+True,BCE,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+True,BCE,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+True,BCE,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024
+True,BinaryFocal,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512
+True,BinaryFocal,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512
+True,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024

@@ -76,6 +76,11 @@ class TrainingHandler:
             except Exception:
                 traceback.print_exc()
                 break  # Break on other exceptions
+        # Just to be safe
+        current_batch_size //= 2
+        accumulation_steps = desired_batch_size // current_batch_size
+        dataloader = DataLoader(dataloader.dataset, batch_size=current_batch_size, shuffle=True, num_workers=2)
+        torch.cuda.empty_cache()
         return dataloader, accumulation_steps
     
     def train(self, train_loader, validation_loader=None, save=True, epochs=5):

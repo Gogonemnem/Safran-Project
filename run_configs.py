@@ -6,7 +6,7 @@ from torch.utils.data import DataLoader
 from training import TrainingHandler
 from evaluation import EvaluationHandler
 from custom_dataset import CustomDataset
-from data_preprocessing import ANOMALY_LABELS, load_data
+from data_preprocessing import ANOMALY_LABELS, ANOMALY_SUBCATEGORIES, load_data
 from custom_dataset import CustomDataset
 from model import SequenceClassificationModel
 from metrics import custom_classification_report
@@ -30,16 +30,22 @@ def main():
         max_epochs = row['Epochs']
         learning_rate = row['Learning Rate']
         max_len = row['Max Length']
+        is_subcategory = row['Subcategory']
 
         layer_nums = eval(layer_nums_str) if isinstance(layer_nums_str, str) else None        
         
         # Load data
+        if is_subcategory:
+            labels = ANOMALY_LABELS
+        else:
+            labels = ANOMALY_SUBCATEGORIES
+
         if abbreviated:
-            train_df = load_data("./data/train_data_final.pkl", ANOMALY_LABELS, pp_path="./data/train_data_processed2.pkl")
-            test_df = load_data("./data/test_data_final.pkl", ANOMALY_LABELS, pp_path="./data/test_data_processed2.pkl")
+            train_df = load_data("./data/train_data_final.pkl", labels, pp_path="./data/train_data_processed2.pkl")
+            test_df = load_data("./data/test_data_final.pkl", labels, pp_path="./data/test_data_processed2.pkl")
         else: 
-            train_df = load_data("./data/train_data_final.pkl", ANOMALY_LABELS)
-            test_df = load_data("./data/test_data_final.pkl", ANOMALY_LABELS)
+            train_df = load_data("./data/train_data_final.pkl", labels)
+            test_df = load_data("./data/test_data_final.pkl", labels)
 
         tokenizer = SequenceClassificationModel.get_tokenizer(encoder_name)
 
@@ -60,6 +66,9 @@ def main():
 
         if abbreviated:
             model.model_name += '_Abbreviated'
+
+        if is_subcategory:
+            model.model_name += '_Subcategory'
 
         loss_fn = losses.loss(model, loss_type, balanced, training_set, training_loader, device)
         optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate)

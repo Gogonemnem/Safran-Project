@@ -7,10 +7,10 @@ from torch.utils.data import DataLoader
 
 
 class EvaluationHandler:
-    def __init__(self, model, device, metrics_dict=None):
+    def __init__(self, model, device, labels, metrics_dict=None):
         self.batch_processor = BatchProcessor(model, device)
         if metrics_dict is not None:
-            self.metrics_manager = MetricsManager(model, device, metrics_dict)
+            self.metrics_manager = MetricsManager(model, device, metrics_dict, labels)
 
     def adjust_batch_size_for_evaluation(self, dataloader, desired_batch_size, max_attempts=5):
         attempt = 0

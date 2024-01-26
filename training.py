@@ -8,7 +8,7 @@ from evaluation import EvaluationHandler
 from model_management import ModelManager
 
 class TrainingHandler:
-    def __init__(self, model, optimizer, loss_fn, device, metrics_dict=None, directory=None, base_path=None):
+    def __init__(self, model, optimizer, loss_fn, device, labels, metrics_dict=None, directory=None, base_path=None):
         self.batch_processor = BatchProcessor(model, device)
         self.optimizer = optimizer
         self.loss_fn = loss_fn
@@ -21,7 +21,7 @@ class TrainingHandler:
         self.accumulation_steps = 1
 
         if metrics_dict is not None:
-            self.metrics_manager = MetricsManager(model, device, metrics_dict)
+            self.metrics_manager = MetricsManager(model, device, metrics_dict, labels)
         
         if directory is not None:
             loaded_model = ModelManager.load_model(model, directory, base_path)

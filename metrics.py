@@ -1,7 +1,6 @@
 import torch
 from sklearn import metrics
 import numpy as np
-from data_preprocessing import ANOMALY_LABELS
 
 
 def binary_accuracy_per_label(y_true, y_pred):
@@ -14,8 +13,8 @@ def binary_accuracy_averaged(y_true, y_pred):
     accuracy_averaged = accuracy_per_label.mean()
     return accuracy_averaged
 
-def custom_classification_report(y_true, y_pred):
-    report = metrics.classification_report(y_true, y_pred, output_dict=True, target_names=ANOMALY_LABELS, zero_division=0)
+def custom_classification_report(y_true, y_pred, labels):
+    report = metrics.classification_report(y_true, y_pred, output_dict=True, target_names=labels, zero_division=0)
     accuracy = binary_accuracy_per_label(y_true, y_pred)
     extended_accuracy_new = np.append(accuracy, [accuracy.mean()] * (len(report) - len(accuracy)))
 
@@ -33,14 +32,14 @@ def custom_classification_report(y_true, y_pred):
     return updated_report
 
 class MetricsManager:
-    def __init__(self, model, device, metrics_dict):
+    def __init__(self, model, device, metrics_dict, labels):
         self.model = model
         self.device = device
         self.metrics_dict = metrics_dict
+        self.labels = labels
     
     def calculate_metrics(self, targets, outputs, is_logit=True, thresholds=0.5, percentile=None, return_thresholds=False):
         results = {}
-        labels = ANOMALY_LABELS
         if is_logit:
             outputs = torch.sigmoid(outputs)
 
@@ -63,7 +62,7 @@ class MetricsManager:
             if metric_name in ["F1 Scores per Class", "Binary Accuracy per Class"]:
                 metric_scores = metric_fn(targets.cpu(), outputs.cpu())  # Assuming targets and outputs are tensors
                 for i, score in enumerate(metric_scores):
-                    label = labels[i] if i < len(labels) else f"Class {i}"
+                    label = self.labels[i] if i < len(self.labels) else f"Class {i}"
                     results[f"{metric_name} - {label}"] = score
             else:
                 results[metric_name] = metric_fn(targets.cpu(), outputs.cpu())

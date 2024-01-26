@@ -36,9 +36,9 @@ def main():
         
         # Load data
         if is_subcategory:
-            labels = ANOMALY_LABELS
-        else:
             labels = ANOMALY_SUBCATEGORIES
+        else:
+            labels = ANOMALY_LABELS 
 
         if abbreviated:
             train_df = load_data("./data/train_data_final.pkl", labels, pp_path="./data/train_data_processed2.pkl")
@@ -73,14 +73,14 @@ def main():
         loss_fn = losses.loss(model, loss_type, balanced, training_set, training_loader, device)
         optimizer = torch.optim.Adam(params =  model.parameters(), lr=learning_rate)
         metrics_dict = {
-            "Custom Classification Report": lambda y_true, y_pred: custom_classification_report(y_true, y_pred),
+            "Custom Classification Report": lambda y_true, y_pred: custom_classification_report(y_true, y_pred, labels),
             "Optimization Metric": lambda y_true, y_pred: sklearn.metrics.f1_score(y_true, y_pred, average='macro', zero_division=0)
         }
 
 
         # Train and evaluate the model
-        trainer = TrainingHandler(model, optimizer, loss_fn, device, metrics_dict, directory="model_save")
-        evaluator = EvaluationHandler(model, device, metrics_dict)    
+        trainer = TrainingHandler(model, optimizer, loss_fn, device, labels, metrics_dict, directory="model_save")
+        evaluator = EvaluationHandler(model, device, labels, metrics_dict)    
         trainer.train(training_loader, testing_loader, save=True, epochs=max_epochs)
         loss, metrics_results, thresholds = evaluator.evaluate(testing_loader, loss_fn, optimize=True)
 

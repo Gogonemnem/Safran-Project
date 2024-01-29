@@ -53,10 +53,10 @@ ANOMALY_LABELS = ['Deviation / Discrepancy - Procedural',
 
 
 ANOMALY_SUBCATEGORIES = [
-    "Aircraft Equipment Critical",
-    "Aircraft Equipment Less Severe",
+    "Aircraft Equipment Problem Critical", # Aircraft Equipment Critical
+    "Aircraft Equipment Problem Less Severe", #Aircraft Equipment Less Severe
     "Airspace Violation All Types",
-    "ATC Issue All Types", # "ATC Issue All Types",
+    "ATC Issue All Types", # "ATC Issues All Types",
     "Flight Deck / Cabin / Aircraft Event Illness / Injury",
     "Flight Deck / Cabin / Aircraft Event Passenger Electronic Device",
     "Flight Deck / Cabin / Aircraft Event Passenger Misconduct",
@@ -64,9 +64,9 @@ ANOMALY_SUBCATEGORIES = [
     "Flight Deck / Cabin / Aircraft Event Other / Unknown",
     "Conflict NMAC",
     "Conflict Airborne Conflict",
-    "Conflict Ground Conflict" # Not in Documentation
-    # "Conflict Ground Conflict, Critical",
-    # "Conflict Ground Conflict, Less Severe",
+    "Conflict Ground Conflict", # Not in Documentation
+    # "Conflict Ground Conflict Critical",
+    # "Conflict Ground Conflict Less Severe",
     "Deviation - Altitude Crossing Restriction Not Met",
     "Deviation - Altitude Excursion From Assigned Altitude", # "...from..."
     "Deviation - Altitude Overshoot",
@@ -82,7 +82,7 @@ ANOMALY_SUBCATEGORIES = [
     "Deviation / Discrepancy - Procedural Published Material / Policy",
     "Deviation / Discrepancy - Procedural Security",
     "Deviation / Discrepancy - Procedural Unauthorized Flight Operations (UAS)",
-    "Deviation / Discrepancy - Procedural Weight and Balance",
+    "Deviation / Discrepancy - Procedural Weight And Balance", #...and...
     "Deviation / Discrepancy - Procedural Other / Unknown",
     "Ground Excursion Ramp",
     "Ground Excursion Runway",
@@ -109,7 +109,7 @@ ANOMALY_SUBCATEGORIES = [
     # "Inflight Event / Encounter Fly Away (UAS)",
     "Inflight Event / Encounter Fuel Issue",
     "Inflight Event / Encounter Laser",
-    "Inflight Event / Encounter Loss of Aircraft Control",
+    "Inflight Event / Encounter Loss Of Aircraft Control", #...of...
     "Inflight Event / Encounter Object",
     "Inflight Event / Encounter Bird / Animal",
     "Inflight Event / Encounter Unstabilized Approach",

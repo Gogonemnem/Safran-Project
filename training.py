@@ -19,6 +19,7 @@ class TrainingHandler:
         self.base_path = base_path
         self.start_epoch = 0
         self.accumulation_steps = 1
+        self.labels = labels
 
         if metrics_dict is not None:
             self.metrics_manager = MetricsManager(model, device, metrics_dict, labels)
@@ -43,7 +44,7 @@ class TrainingHandler:
 
         # Validation phase
         if validation_loader is not None:
-            evaluation_handler = EvaluationHandler(self.model, self.device, self.metrics_dict)
+            evaluation_handler = EvaluationHandler(self.model, self.device, self.labels, self.metrics_dict)
             avg_val_loss, val_metrics_results, val_thresholds = evaluation_handler.evaluate(validation_loader, self.loss_fn, optimize=False)
         else:
             avg_val_loss = None

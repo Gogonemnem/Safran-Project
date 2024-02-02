@@ -8,7 +8,7 @@ from evaluation import EvaluationHandler
 from model_management import ModelManager
 
 class TrainingHandler:
-    def __init__(self, model, optimizer, loss_fn, device, metrics_dict=None, directory=None, base_path=None):
+    def __init__(self, model, optimizer, loss_fn, device, labels, metrics_dict=None, directory=None, base_path=None):
         self.batch_processor = BatchProcessor(model, device)
         self.optimizer = optimizer
         self.loss_fn = loss_fn
@@ -19,9 +19,10 @@ class TrainingHandler:
         self.base_path = base_path
         self.start_epoch = 0
         self.accumulation_steps = 1
+        self.labels = labels
 
         if metrics_dict is not None:
-            self.metrics_manager = MetricsManager(model, device, metrics_dict)
+            self.metrics_manager = MetricsManager(model, device, metrics_dict, labels)
         
         if directory is not None:
             loaded_model = ModelManager.load_model(model, directory, base_path)
@@ -43,7 +44,7 @@ class TrainingHandler:
 
         # Validation phase
         if validation_loader is not None:
-            evaluation_handler = EvaluationHandler(self.model, self.device, self.metrics_dict)
+            evaluation_handler = EvaluationHandler(self.model, self.device, self.labels, self.metrics_dict)
             avg_val_loss, val_metrics_results, val_thresholds = evaluation_handler.evaluate(validation_loader, self.loss_fn, optimize=False)
         else:
             avg_val_loss = None
@@ -76,6 +77,11 @@ class TrainingHandler:
             except Exception:
                 traceback.print_exc()
                 break  # Break on other exceptions
+        # Just to be safe
+        current_batch_size //= 2
+        accumulation_steps = desired_batch_size // current_batch_size
+        dataloader = DataLoader(dataloader.dataset, batch_size=current_batch_size, shuffle=True, num_workers=2)
+        torch.cuda.empty_cache()
         return dataloader, accumulation_steps
     
     def train(self, train_loader, validation_loader=None, save=True, epochs=5):

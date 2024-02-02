@@ -1,13 +1,33 @@
 import torch
+from torch import nn
 from transformers import AutoTokenizer, AutoModel, AutoModelForSequenceClassification
 
 
+class AeroBOTSequenceClassification(nn.Module):
+    def __init__(self, encoder_name, num_labels):
+        super(AeroBOTSequenceClassification, self).__init__()
+        self.encoder = AutoModel.from_pretrained(encoder_name)
+        self.dense = nn.Linear(self.encoder.config.hidden_size, 32)
+        self.relu = nn.ReLU()
+        self.classifier = nn.Linear(32, num_labels)
+
+    def forward(self, input_ids, attention_mask=None, token_type_ids=None):
+        outputs = self.encoder(input_ids, attention_mask=attention_mask, token_type_ids=token_type_ids)
+        cls_token = outputs.last_hidden_state[:, 0, :]  # Extract the CLS token
+        x = self.dense(cls_token)
+        x = self.relu(x)
+        logits = self.classifier(x)
+        return logits
+
 class SequenceClassificationModel(torch.nn.Module):
-    def __init__(self, model_name='bert-base-uncased', num_labels=15):
+    def __init__(self, encoder_name='bert-base-uncased', num_labels=15, model_name=None):
         super(SequenceClassificationModel, self).__init__()
-        self.original_name = model_name
-        self.model_name = model_name.replace("/", "_")
-        self.l1 = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
+        self.original_name = encoder_name
+        self.model_name = encoder_name.replace("/", "_")
+        if model_name == "AeroBOT":
+            self.l1 = AeroBOTSequenceClassification(encoder_name, num_labels)
+        else:
+            self.l1 = AutoModelForSequenceClassification.from_pretrained(encoder_name, num_labels=num_labels)
 
     def forward(self, data):
         ids = data['ids']
@@ -16,7 +36,10 @@ class SequenceClassificationModel(torch.nn.Module):
         
         output = self.l1(ids, attention_mask=mask, token_type_ids=token_type_ids)
         
-        return output.logits
+        if isinstance(self.l1, AeroBOTSequenceClassification):
+            return output  # Custom model returns logits directly
+        else:
+            return output.logits
     
     @staticmethod
     def get_tokenizer(name):
@@ -30,32 +53,38 @@ class SequenceClassificationModel(torch.nn.Module):
             param.requires_grad = trainable
 
     def _find_and_set_encoder_layers(self, module, layer_nums, trainable):
-        if hasattr(module, 'encoder'):
+        found = False
+        # Check if module has 'encoder' and 'layer' attributes directly
+        if hasattr(module, 'encoder') and hasattr(module.encoder, 'layer'):
             for layer_num in layer_nums:
                 try:
-                    self._set_layer_trainable(module.encoder.layer[layer_num], trainable)
+                    layer = module.encoder.layer[layer_num]
+                    self._set_layer_trainable(layer, trainable)
+                    found = True
                 except IndexError:
                     print(f"Layer {layer_num} not found in the encoder.")
-            return True
         else:
+            # Recursively search for encoder in child modules if direct access failed
             for child in module.children():
                 if self._find_and_set_encoder_layers(child, layer_nums, trainable):
-                    return True
-        return False
+                    found = True
+                    break  # Found and set, no need to continue searching
+        return found
 
     def set_trainable_layers(self, layer_nums=None):
         if layer_nums is not None:
             self.model_name = f'{self.model_name}_Unfrozen{layer_nums}'
             
         # Freeze all parameters first
-        for param in self.parameters():
-            param.requires_grad = False
+        self._set_layer_trainable(self, False)  # Freeze everything first
 
-        # Unfreeze classifier layers
+        # Unfreeze specified encoder layers
+        if layer_nums:
+            if not self._find_and_set_encoder_layers(self.l1, layer_nums, True):
+                print("Specified encoder layers not found or unfrozen.")
+
+        # Unfreeze custom layers if present
         if hasattr(self.l1, 'classifier'):
             self._set_layer_trainable(self.l1.classifier, True)
-
-        # Attempt to find and unfreeze encoder layers
-        if not self._find_and_set_encoder_layers(self.l1, layer_nums or [], True):
-            print("Encoder layers not found in the model.")
-
+        if hasattr(self.l1, 'dense'):
+            self._set_layer_trainable(self.l1.dense, True)

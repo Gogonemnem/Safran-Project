@@ -25,6 +25,7 @@ class SequenceClassificationModel(torch.nn.Module):
         self.original_name = encoder_name
         self.model_name = encoder_name.replace("/", "_")
         if model_name == "AeroBOT":
+            self.model_name = f"{model_name}_{self.model_name}"
             self.l1 = AeroBOTSequenceClassification(encoder_name, num_labels)
         else:
             self.l1 = AutoModelForSequenceClassification.from_pretrained(encoder_name, num_labels=num_labels)

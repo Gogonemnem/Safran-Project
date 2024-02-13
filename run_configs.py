@@ -92,12 +92,18 @@ def main():
         trainer = TrainingHandler(model, optimizer, loss_fn, device, labels, metrics_dict, directory="model_save")
         evaluator = EvaluationHandler(model, device, labels, metrics_dict)    
         trainer.train(training_loader, testing_loader, save=True, epochs=max_epochs)
-        _, _, thresholds = evaluator.evaluate(training_loader, loss_fn, optimize=True)
-        hyperparameters={"thresholds": thresholds}
-        loss, metrics_results, thresholds = evaluator.evaluate(testing_loader, loss_fn, optimize=False, hyperparameters=hyperparameters)
+        # _, _, thresholds = evaluator.evaluate(training_loader, loss_fn, optimize=True)
+        # hyperparameters={"thresholds": thresholds}
+        # loss, metrics_results, thresholds = evaluator.evaluate(testing_loader, loss_fn, optimize=False, hyperparameters=hyperparameters)
 
-        # Save results, model, etc.
-        ModelManager.save_results(model.model_name, metrics_results, thresholds, "results-sub.csv")
+        # # Save results, model, etc.
+        # ModelManager.save_results(model.model_name, metrics_results, thresholds, "results-sub.csv")
+
+        pred = evaluator.evaluate(testing_loader, loss_fn, optimize=True, return_pred=True)
+        pred_df = pd.read_csv("pred.csv")
+        pred_df[model.model_name] = pred.tolist()
+        pred_df.to_csv("pred.csv")
+
 
 if __name__ == "__main__":
     main()

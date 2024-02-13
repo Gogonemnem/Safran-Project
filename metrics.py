@@ -38,7 +38,7 @@ class MetricsManager:
         self.metrics_dict = metrics_dict
         self.labels = labels
     
-    def calculate_metrics(self, targets, outputs, is_logit=True, thresholds=0.5, percentile=None, return_thresholds=False):
+    def calculate_metrics(self, targets, outputs, is_logit=True, thresholds=0.5, percentile=None, return_thresholds=False, return_pred=False):
         results = {}
         if is_logit:
             outputs = torch.sigmoid(outputs)
@@ -66,10 +66,15 @@ class MetricsManager:
                     results[f"{metric_name} - {label}"] = score
             else:
                 results[metric_name] = metric_fn(targets.cpu(), outputs.cpu())
-
+        
+        return_output = [results]
         if return_thresholds:
-            return results, thresholds
-        return results
+            return_output.append(thresholds)
+        if return_pred:
+            return_output.append(outputs.cpu())
+        if len(return_output) == 1:
+            return results
+        return tuple(return_output)
     
     def format_value(self, val):
         """Helper function to format the value for printing."""

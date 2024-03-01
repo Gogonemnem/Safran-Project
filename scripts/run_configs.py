@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../src')
+
 import pandas as pd
 import torch
 import sklearn
@@ -41,12 +44,12 @@ def main():
             labels = ANOMALY_LABELS 
 
         if abbreviated:
-            train_df = load_data("./data/train_data_final.pkl", labels, pp_path="./data/train_data_processed2.pkl")
-            test_df = load_data("./data/test_data_final.pkl", labels, pp_path="./data/test_data_processed2.pkl")
+            train_df = load_data("../data/train_data_final.pkl", labels, pp_path="../data/train_data_processed2.pkl")
+            test_df = load_data("../data/test_data_final.pkl", labels, pp_path="../data/test_data_processed2.pkl")
         else: 
-            train_df = load_data("./data/train_data_final.pkl", labels)
-            # test_df = load_data("./data/test_data_final.pkl", labels)
-            test_df = pd.read_csv("./data/subset_test_data.csv")
+            train_df = load_data("../data/train_data_final.pkl", labels)
+            # test_df = load_data("../data/test_data_final.pkl", labels)
+            test_df = pd.read_csv("../data/subset_test_data.csv")
             # Define a function to convert lists to numpy arrays
             def str_to_list(string):
                 # Remove the square brackets and split the string by spaces
@@ -97,12 +100,12 @@ def main():
         # loss, metrics_results, thresholds = evaluator.evaluate(testing_loader, loss_fn, optimize=False, hyperparameters=hyperparameters)
 
         # # Save results, model, etc.
-        # ModelManager.save_results(model.model_name, metrics_results, thresholds, "results-sub.csv")
+        # ModelManager.save_results(model.model_name, metrics_results, thresholds, "../out/results-sub.csv")
 
         pred = evaluator.evaluate(testing_loader, loss_fn, optimize=True, return_pred=True)
-        pred_df = pd.read_csv("pred.csv")
+        pred_df = pd.read_csv("../out/pred.csv")
         pred_df[model.model_name] = pred.tolist()
-        pred_df.to_csv("pred.csv")
+        pred_df.to_csv("../out/pred.csv")
 
 
 if __name__ == "__main__":

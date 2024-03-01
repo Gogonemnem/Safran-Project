@@ -3,3 +3,5 @@ model_save
 *.pptx*
 .python-version
 *_local.ipynb
+*pyc
+*.ipynb_checkpoints

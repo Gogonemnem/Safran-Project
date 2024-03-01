@@ -8,7 +8,6 @@ model_save
 # From https://github.com/microsoft/vscode-python/blob/main/.gitignore
 .DS_Store
 .huskyrc.json
-out
 log.log
 **/node_modules
 *.pyc

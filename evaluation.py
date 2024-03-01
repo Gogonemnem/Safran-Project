@@ -38,15 +38,21 @@ class EvaluationHandler:
 
         return dataloader
 
-    def evaluate(self, eval_loader, loss_fn, hyperparameters=None, optimize=False):
+    def evaluate(self, eval_loader, loss_fn, hyperparameters=None, optimize=False, return_pred=False):
         eval_loader = self.adjust_batch_size_for_evaluation(eval_loader, eval_loader.batch_size)
         loss, logits, targets = self.batch_processor.process_evaluation_batches(eval_loader, loss_fn)
 
         if optimize:
             print("Optimizing Thresholds")
-            thresholds, metrics_results = self.optimize_thresholds(logits, targets)
+            res = self.optimize_thresholds(logits, targets, return_pred=return_pred)
         else:
-            thresholds, metrics_results = self.predetermined_thresholds(logits, targets, hyperparameters)
+            res = self.predetermined_thresholds(logits, targets, hyperparameters, return_pred=return_pred)
+        
+        if return_pred:
+            thresholds, metrics_results, pred = res
+            return pred
+        else:
+            thresholds, metrics_results = res
 
         print(f"Evaluation Results:")
         print(f"Average Loss: {loss:.4f}")
@@ -54,7 +60,7 @@ class EvaluationHandler:
 
         return loss, metrics_results, thresholds
     
-    def predetermined_thresholds(self, logits, targets, hyperparameters):
+    def predetermined_thresholds(self, logits, targets, hyperparameters, return_pred=False):
         # Set default values
         thresholds = None
         percentile = None
@@ -64,10 +70,11 @@ class EvaluationHandler:
             thresholds = hyperparameters.get("thresholds", thresholds)
             percentile = hyperparameters.get("percentile", percentile)
 
-        metrics_results, thresholds = self.metrics_manager.calculate_metrics(targets, logits, thresholds=thresholds, percentile=percentile, return_thresholds=True)
-        return thresholds, metrics_results
+        res = self.metrics_manager.calculate_metrics(targets, logits, thresholds=thresholds, percentile=percentile, return_thresholds=True, return_pred=return_pred)
+        
+        return res
     
-    def optimize_thresholds(self, logits, targets):
+    def optimize_thresholds(self, logits, targets, return_pred=False):
         best_global_metric = -np.inf
         num_labels = len(logits[0])
         best_thresholds = [0.5] * num_labels
@@ -85,6 +92,11 @@ class EvaluationHandler:
                     best_global_metric = current_metric
                     best_thresholds = temp_thresholds
 
-        metrics_results = self.metrics_manager.calculate_metrics(targets, logits, thresholds=temp_thresholds)
-        return best_thresholds, metrics_results
+        res = self.metrics_manager.calculate_metrics(targets, logits, thresholds=temp_thresholds, return_pred=return_pred)
+        if return_pred:
+            metrics_results, pred = res
+            return best_thresholds, *res
+        else:
+            metrics_results = res
+            return best_thresholds, res
 

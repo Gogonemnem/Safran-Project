@@ -47,3 +47,21 @@ False,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,
 True,BinaryFocal,True,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512,True
 True,BinaryFocal,True,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,True
 True,BinaryFocal,True,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024,True
+True,BCE,False,,bert-base-uncased,32,5,2e-05,512,False
+True,BCE,False,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,False
+True,BCE,False,,allenai/longformer-base-4096,32,5,2e-05,1024,False
+True,BCE,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512,False
+True,BCE,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,False
+True,BCE,False,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024,False
+False,BCE,False,,bert-base-uncased,32,5,2e-05,512,True
+False,BCE,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512,True
+False,BinaryFocal,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512,True
+True,BCE,False,"[8, 9, 10, 11]",bert-base-uncased,32,5,2e-05,512,True
+False,BCE,False,,NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,True
+False,BCE,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,True
+False,BinaryFocal,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,True
+True,BCE,False,"[8, 9, 10, 11]",NASA-AIML/MIKA_SafeAeroBERT,32,5,2e-05,512,True
+False,BCE,False,,allenai/longformer-base-4096,32,5,2e-05,1024,True
+False,BCE,False,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024,True
+False,BinaryFocal,False,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024,True
+True,BCE,False,"[8, 9, 10, 11]",allenai/longformer-base-4096,32,5,2e-05,1024,True
